@@ -7,7 +7,7 @@
 [![Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://prettier.io/)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg?style=flat-square)](https://conventionalcommits.org)
 
-> 拦截浏览器跳转，包括点击 a 标签，window.open 方法；
+> 拦截浏览器跳转，包括点击 a 标签，window.open 方法；  
 > 一般可以用于拦截测试环境、线上环境互相跳转
 
 ## Installation
