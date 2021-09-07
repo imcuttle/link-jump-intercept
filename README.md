@@ -21,7 +21,17 @@ yarn add link-jump-intercept
 ## Usage
 
 ```javascript
-import linkJumpIntercept from 'link-jump-intercept'
+import { register } from 'link-jump-intercept'
+
+const unregister = register({
+  onInterceptors: (nextUrl) => {
+    // 阻止跳转线上
+    return nextUrl.includes('online') ? false : true
+  }
+})
+
+// 取消副作用
+unregister()
 ```
 
 ## Contributing
