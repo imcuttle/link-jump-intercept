@@ -43,7 +43,7 @@
   "main": "lib",
   "types": "types",
   "license": "MIT",
-  "repository": "余聪/link-jump-intercept",
+  "repository": "imcuttle/link-jump-intercept",
   "module": "es",
   "jest": {
     "transform": {

@@ -52,4 +52,4 @@ This library is written and maintained by 余聪, <a href="mailto:yucong@yuanfud
 
 ## License
 
-MIT - [余聪](https://github.com/余聪) 🐟
+MIT - [余聪](https://github.com/imcuttle) 🐟
