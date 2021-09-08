@@ -54,6 +54,6 @@ export function register({ onInterceptors = () => {} }: { onInterceptors?: (next
   return () => {
     window.open = oldOpen
 
-    window.document.removeEventListener('click', linkJumpClickHandle)
+    window.document.removeEventListener('click', linkJumpClickHandle, true)
   }
 }
