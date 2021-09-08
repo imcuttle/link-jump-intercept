@@ -1,6 +1,6 @@
 {
   "name": "link-jump-intercept",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "拦截浏览器跳转",
   "author": "余聪 <yucong@yuanfudao.com>",
   "scripts": {
