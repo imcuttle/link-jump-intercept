@@ -22,12 +22,14 @@ export function register({ onInterceptors = () => {} }: { onInterceptors?: (next
 
       if (!handleUrl(href)) {
         evt.preventDefault()
+        evt.stopImmediatePropagation?.()
+        evt.stopPropagation()
         return
       }
     }
   }
 
-  window.document.addEventListener('click', linkJumpClickHandle)
+  window.document.addEventListener('click', linkJumpClickHandle, true)
 
   // const attrs = ['href', 'host', 'hostname', 'protocol', 'port']
   // attrs.forEach(name => {
