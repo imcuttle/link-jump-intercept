@@ -3,14 +3,18 @@
  * @author 余聪
  */
 
-export function register({ onInterceptors = () => {} }: { onInterceptors?: (nextUrl: string | URL) => void | false }) {
+export function register({
+  onInterceptors = () => {}
+}: {
+  onInterceptors?: (nextUrl: string | URL, data?: { node?: HTMLAnchorElement }) => void | false
+}) {
   if (typeof location === 'undefined') {
     return
   }
 
-  function handleUrl(url: any) {
+  function handleUrl(url: any, data?) {
     if (url) {
-      return onInterceptors(url) !== false
+      return onInterceptors(url, data) !== false
     }
     return true
   }
@@ -20,7 +24,7 @@ export function register({ onInterceptors = () => {} }: { onInterceptors?: (next
       const elem: HTMLLinkElement = evt.target as any
       const href = elem.href
 
-      if (!handleUrl(href)) {
+      if (!handleUrl(href, { node: elem })) {
         evt.preventDefault()
         evt.stopImmediatePropagation?.()
         evt.stopPropagation()
